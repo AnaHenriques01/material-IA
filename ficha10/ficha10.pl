@@ -33,9 +33,9 @@ jogo(2,bb,xpto0123).
 excecao(jogo(3,cc,500)).
 excecao(jogo(3,cc,2500)).
 
--jogo(Id,Arbito,Ajudas) :-             %Nao há jogo se:
-    nao(jogo(Id,Arbito,Ajudas)),
-    nao(excecao(jogo(Id,Arbito,Ajudas))).
+-jogo(3,Arbito,Ajudas) :-             %Nao há jogo se:
+    nao(jogo(3,Arbito,Ajudas)),
+    nao(excecao(jogo(3,Arbito,Ajudas))).
 
 %---------------------------------------
 %alinea iv)
