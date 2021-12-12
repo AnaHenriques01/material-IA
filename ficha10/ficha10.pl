@@ -90,13 +90,13 @@ excecao(jogo(9,ii,Ajudas)) :-
 
 % # Invariantes
 
-+jogo(Id,Arbitro,_) :: (
-    findall(Id, jogo(Id,Arbitro,_), Lista),
++jogo(Id,_,_) :: (
+    findall(Arbitro, jogo(Id,Arbitro,_), Lista),
     length(Lista,1)
 ).
 
-+jogo(Id,Arbitro,_) :: (
-    findall(Arbitro, jogo(Id,Arbitro,_), Lista),
++jogo(_,Arbitro,_) :: (
+    findall(Id, jogo(Id,Arbitro,_), Lista),
     length(Lista,N),
     N =< 3
 ).
