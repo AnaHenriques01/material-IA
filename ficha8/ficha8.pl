@@ -117,7 +117,7 @@ descendente(D,A,G) :- filho(D,X),grau(X,A,N), G is N+1.
 +neto(N,A) :: (
     findall((As),(neto(N,As)),S),
     length(S,N),
-    N =< 2
+    N =< 4
 ).
 
 %---------------------------------------------------------------------------------------------------
@@ -129,7 +129,7 @@ descendente(D,A,G) :- filho(D,X),grau(X,A,N), G is N+1.
 +neto(A,N) :: (
     findall((As),(avo(As,N)),S),
     length(S,N),
-    N =< 2
+    N =< 4
 ).
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
