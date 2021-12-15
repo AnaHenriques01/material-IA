@@ -45,7 +45,7 @@ adjacente(X,Y,K,E, grafo(_,Es)) :- member(aresta(Y,X,K,E),Es).
 
 %Escreva um predicado caminho(G,A,B,P) para encontrar um caminho acíclico P do nó A para o nó B no grafo G.
 
-caminho( G,A,B,P ) :- caminho( G,A,B,Historico,P).
+caminho(G,A,B,P) :- caminho(G,A,B,[B],P).
 
 caminho(Grafo,A,A,[A|Caminho],[A|Caminho]).
 caminho(Grafo,A,B,Historico,Caminho) :-           
@@ -68,14 +68,15 @@ ciclo( G,A,P ) :-
 %Escreva um predicado caminhoK(G,A,B,P, Km, Es) para encontrar um caminho acíclico P do nó A para o nó B no grafo G,
 %devolvendo, ainda, os quilómetros (Km) e as estradas percorridas (Es).
 
-caminhoK( G,A,B,P,Km,Es ) :- caminhoK( G,A,B,P,Km,Es,(Historico,0,[]) ).
+caminhoK(G,A,B,P,Km,Es) :-
+      caminho1K(G,A,[B],P,Km,Es).
 
-caminhoK( G,A,A,P,Km,Es,(P,Km,Es) ).
-caminhoK( G,A,B,P,Km,Es,(Historico,Km0,Esc0) ) :-
-      adjacente(C, B, Es1, Km1, G),                                 % C é o nodo anterior ao nodo B (daí ser adjacente).
-      nao(membro( C,Historico )),                                   % C não pode ter sido antes visitado.
-      caminhoK( G,A,C,P,Km,Es,([C|Historico],Km2,[Es1|Es0]) ),      % aplicar recursivamente o predicado para chegarmos de A a C, somando os Kms in between e adicionando as estradas in between a uma lista.
-      Km is Km1 + Km2.                                              % o km total será a soma do km1 (de C a B) e do km2 (dos restantes caminhos de A a C).
+caminho1K(_,A,[A|P1],[A|P1],0, []).
+caminho1K(G,A,[Y|P1],P,K1,[E|Es]) :- 
+    adjacente(X,Y,E,Ki,G),
+    nao(membro(X,[Y|P1])),
+    caminho1K(G,A,[X,Y|P1],P,K,Es),
+    K1 is K + Ki.
 
 %--------------------------------- 
 %alinea 5)
