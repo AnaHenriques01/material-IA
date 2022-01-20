@@ -135,7 +135,7 @@ A pesquisa informada já não é forçada. Esta segue as circunstâncias que lav
 A gulosa (método de pesquisa informada) vai escolhendo, passo a passo, o caminho mais curto. Ou seja, entre duas opções escolhe o mais curto. No entanto, isso não quer dizer que, no final, o output seja o caminho mais curto.
 
 											       *
-											5 /   	    \ 10
+											5 /   	   \ 10
     											 *           *
               								             5 /   	    / 2
 									              * ——— * ——— ★
