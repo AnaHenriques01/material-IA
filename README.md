@@ -44,7 +44,7 @@ Neste caso, a maria gosta de qualquer animal, exceto répteis.
 
 A utility predicate meaning something like “not equals”.\
 diferente(X,X) :- !,fail.\
-diferente(_,_).
+diferente(_ ,_).
 
 Se ambas as variáveis forem iguais, dá falso. Tudo o resto, é verdadeiro.
 
