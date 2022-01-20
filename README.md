@@ -55,7 +55,7 @@ not(G) fails if G succeeds.\
 not(G) succeeds if G does not succeed.
 
 gosta(maria,X) :- not(reptil(X)).\
-diferente(X,Y) :- not(X=Y).
+diferente(X,Y) :-  not(X=Y).
 
 Imaginenos isto:\
 inocente(X) :- ocupacao(X,freira).\
