@@ -15,7 +15,7 @@ Em Prolog, predicados com o MESMO nome, mas com o número de argumentos DIFERENT
 
 Por exemplo:\
 tocaGuitarra(miguel):-feliz(miguel).\
-tocaGuitarra(miguel):-ouveMusica(miguel).\
+tocaGuitarra(miguel):-ouveMusica(miguel).
 
 Têm ambas o mesmo nome de predicado e a mesma aridade — tocaGuitarra(miguel) — mas têm ambas corpos diferentes. Como tal, é uma disjunção ( ou é feliz ou ouve música ).
 
