@@ -83,8 +83,8 @@ Para mostrar mais opções para X, tenho de fazer ⇧.
 
 Quando se trata de pesquisa, primeira explora-se ao nível de largura (ser o nodo a seguir).
 
-					     (0,0)
-                                        /            \
+					(0,0)
+                            /                              \
                          (8,0)                            (0,5)
                    /       |       \                 /      |      \
 		 (0,0)   (8,5)   (3,5)             (0,0)  (8,5)  (5,0)
@@ -134,12 +134,12 @@ A pesquisa informada já não é forçada. Esta segue as circunstâncias que lav
 
 A gulosa (método de pesquisa informada) vai escolhendo, passo a passo, o caminho mais curto. Ou seja, entre duas opções escolhe o mais curto. No entanto, isso não quer dizer que, no final, o output seja o caminho mais curto.
 
-											       *
-											5 /   	   \ 10
-    											 *           *
-              								             5 /   	    / 2
-									              * ——— * ——— ★
-										         3     3
+				      *
+				5 /   	   \ 10
+    				*           *
+              		     5 /   	    / 2
+			      * ——— * ——— ★
+				3     3
 
 Neste caso, para chegar a ★, a gulosa vai escolher, entre o 5 e o 10, o 5 porque 5 é menor do que 10. E depois seguirá o caminho 5-5-3 porque é o único caminho que leva à ★. No entanto, nós conseguimos analisar que o melhor caminho (menor custo) para chegar à ★ é 10-2.
 
