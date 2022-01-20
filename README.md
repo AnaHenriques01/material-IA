@@ -21,7 +21,7 @@ Têm ambas o mesmo nome de predicado e a mesma aridade — tocaGuitarra(miguel) 
 
 ### CUT
 
-O comando cut permite indicar ao Prolog quais sub-objetivos já satisfeitos não necessitam ser reconsiderados ao se realizar um backtracking. Isto é, ele aborta o processo de backtracking.\
+O comando cut permite indicar ao Prolog quais sub-objetivos já satisfeitos não necessitam ser reconsiderados ao se realizar um backtracking. Isto é, ele aborta o processo de backtracking.
 
 O uso do comando cut é importante porque permite que o programa rode mais rápido, sem perder tempo com sub-objetivos que não contribuem para determinar a resposta do objetivo principal e ocupa ainda menos memória.
 
@@ -40,7 +40,7 @@ Em lógica, fail significa provar que falha. Ou seja, provar que a verdade é fa
 gosta(maria,X) :- reptil(X),!,fail.\
 gosta(maria,X) :- animal(X).
 
-Neste caso, a maria gosta de qualquer animal, exceto répteis.\
+Neste caso, a maria gosta de qualquer animal, exceto répteis.
 
 A utility predicate meaning something like “not equals”.\
 diferente(X,X) :- !,fail.\
@@ -83,13 +83,13 @@ Para mostrar mais opções para X, tenho de fazer ⇧.
 
 Quando se trata de pesquisa, primeira explora-se ao nível de largura (ser o nodo a seguir).
 
-											(0,0)
+					     (0,0)
                                         /            \
                          (8,0)                            (0,5)
                    /       |       \                 /      |      \
-				 (0,0)   (8,5)   (3,5)             (0,0)  (8,5)  (5,0)
-						              /          \
-                     				(8,0)      (0,5)
+		 (0,0)   (8,5)   (3,5)             (0,0)  (8,5)  (5,0)
+	     /          \
+           (8,0)      (0,5)
 
 
 
@@ -105,17 +105,16 @@ Quando se trata de pesquisa, primeira explora-se ao nível de largura (ser o nod
 ### Tipos de problemas:
 
 - Ambiente determinístico, totalmente observável — problema do estado único.\
-O agente “sabe” exactamente o estado em que estará; a solução é uma sequência.\
+O agente “sabe” exactamente o estado em que estará; a solução é uma sequência.
 
 - Ambiente determinístico, não acessível — problema de múltiplos estados.\
 O agente não “sabe” onde está; a solução é uma sequência.\
-Se puder ter vários estados, então estamos perante um problema de estado múltiplo. 
+Se puder ter vários estados, então estamos perante um problema de estado múltiplo.\
 Imaginemos que temos um mapa e temos vários lugares para poder chegar a um lugar em específico. Temos de fazer uma matriz de estimativas e ir vendo a estimativa de um lugar para o outro.
 
-
 - Ambiente não determinístico e/ou parcialmente acessível — problema de contigência.
-        Percepções fornecem novas informações sobre o estado actual.
-        Frequentemente intercalam pesquisa e execução.
+Percepções fornecem novas informações sobre o estado actual.\
+Frequentemente intercalam pesquisa e execução.
 
 - Espaço de estados desconhecido — problema de exploração.
 
@@ -152,17 +151,17 @@ A à estrela (outro método de pesquisa informada) já vai acumulando passo a pa
 Evolução não é só inserir conhecimento. Também é caracterizada por passar do impreciso/desconhecido para verdadeiro.
 
 
-INFORMAÇÃO POSITIVA E NEGATIVA:
+### INFORMAÇÃO POSITIVA E NEGATIVA
 
-Informação positiva - q(X).
-Informação negativa - (-q(X)).
+Informação positiva - q(X).\
+Informação negativa - (-q(X)).\
 Tudo aquilo que não conseguimos provar como verdadeiro ou falso é desconhecido.
 
 - atravessar <- não comboio, ou seja, -comboio.                   Negação forte
 
                 é diferente de
 
-- atravessar <- nao(comboio).                                      Negação por falha na prova
+- atravessar <- nao(comboio).                                     Negação por falha na prova
 
 A primeira negação é muito mais forte porque uma coisa é dizer “posso atravessar se tiver evidência de que o comboio não está a atravessar” e outra coisa, muito mais forte, é dizer “posso atravessar porque não há nenhum comboio”. Negação por falha na prova: não consigo encontrar nenhuma prova de que é verdade, então ASSUMO que é falso.
 
@@ -172,10 +171,7 @@ O -comboio não é para assumir nada, não há, DE FACTO, nenhum comboio e porqu
 Portanto, -q(X) é diferente de nao(q(X)).
 
 
-
-IMPORTANTE PARA O TESTE: Saber Teórica!!!!
-
-
+### IMPORTANTE PARA O TESTE
 
 - Valores nulos do tipo incerto: 
 Exemplo\
