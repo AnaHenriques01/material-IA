@@ -128,7 +128,7 @@ Pesquisa em Profundidade: primeiro vai às folhas de cada nodo e depois é que p
 ——> Estas duas pesquisas são de pesquisa não informada, ou seja, são de pesquisa “forçada”. Elas vão sempre seguir aqueles “caminhos” (largura ou produfindade), independentemente de serem os melhores caminhos OU NÃO.
 
 
-PESQUISA INFORMADA
+### PESQUISA INFORMADA
 
 A pesquisa informada já não é forçada. Esta segue as circunstâncias que lavam ao melhor caminho em termos de peso.
 
