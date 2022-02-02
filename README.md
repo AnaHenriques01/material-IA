@@ -171,7 +171,7 @@ Tudo aquilo que não conseguimos provar como verdadeiro ou falso é desconhecido
 A primeira negação é muito mais forte porque uma coisa é dizer “posso atravessar se tiver evidência de que o comboio não está a atravessar” e outra coisa, muito mais forte, é dizer “posso atravessar porque não há nenhum comboio”. Negação por falha na prova: não consigo encontrar nenhuma prova de que é verdade, então ASSUMO que é falso.
 
 O nao(comboio) é não há evidências que há um comboio e, por isso, assumo que é falso.\
-O -comboio não é para assumir nada, não há, DE FACTO, nenhum comboio e porque isso é verdadeiro que NÃO há.
+O -comboio não é para assumir nada porque não há, DE FACTO, nenhum comboio e porque isso é verdadeiro que NÃO há.
 
 Portanto, -q(X) é diferente de nao(q(X)).
 
